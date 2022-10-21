@@ -16,5 +16,5 @@ export class Category {
      * Image of category
      */
 
-    readonly image: string;
+    readonly image_name: string;
 }

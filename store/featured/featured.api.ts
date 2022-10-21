@@ -1,16 +1,18 @@
 import { Featured } from './../../interfaces/Featured.interface';
-import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react'
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+import { SERVER_IP } from '../../constants';
+
 export const featuredApi = createApi({
 	reducerPath: 'featured/api',
 	baseQuery: fetchBaseQuery({
-		baseUrl: 'http://192.168.0.108:5001/api/featured/'
+		baseUrl: SERVER_IP ,
 	}),
-	endpoints: build =>({
+	endpoints: (build) => ({
 		getFeatured: build.query<Featured, any>({
-			query: ()=>({
-				url: '',
+			query: () => ({
+				url: '/featured',
 			}),
-		})
-	})
-})
-export const {useGetFeaturedQuery} = featuredApi
+		}),
+	}),
+});
+export const { useGetFeaturedQuery } = featuredApi;

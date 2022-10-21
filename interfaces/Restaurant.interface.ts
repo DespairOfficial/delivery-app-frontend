@@ -22,7 +22,7 @@ export class Restaurant {
      * Logo, image of restaurant
      */
 
-    readonly image: string;
+    readonly image_name: string;
 	/**
      * Latitude of restaurant's address
      */

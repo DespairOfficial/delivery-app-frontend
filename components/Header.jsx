@@ -1,4 +1,5 @@
 import {View, Image, Text} from 'react-native'
+import {delivery_color} from '../constants'
 import {
 	UserIcon,
 	ChevronDownIcon,
@@ -18,10 +19,10 @@ const Header = () => {
 				</Text>
 				<Text className="font-bold text-xl">
 					Current location
-					<ChevronDownIcon size={20} color="#00CCBB" />
+					<ChevronDownIcon size={20} color={delivery_color} />
 				</Text>
 			</View>
-			<UserIcon size={35} color="#00CCBB" />
+			<UserIcon size={35} color={delivery_color} />
 		</View>
 	);
 };

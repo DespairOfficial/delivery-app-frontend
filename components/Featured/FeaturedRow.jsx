@@ -2,14 +2,15 @@ import { Text, View, TouchableOpacity, ScrollView } from 'react-native';
 import { useGetRestaurantsByFeaturedIdQuery } from '../../store/restaurant/restaurant.api';
 import { ArrowRightIcon } from 'react-native-heroicons/outline';
 import RestaurantCard from '../Restaurant/RestaurantCard';
+import {delivery_color} from '../../constants'
 const FeaturedRow = ({ id, title, description }) => {
 	const { isError, isFetching, data } =
 		useGetRestaurantsByFeaturedIdQuery(id);
 	return (
-		<View>
+		<View key={id}>
 			<View className="mt-4 flex-row items-center justify-between px-4">
 				<Text className="font-bold text-lg">{title}</Text>
-				<ArrowRightIcon color={'#00CCBB'} />
+				<ArrowRightIcon color={delivery_color} />
 			</View>
 			<Text className="text-xs text-gray-500 px-4 ">{description}</Text>
 			<ScrollView
@@ -24,15 +25,13 @@ const FeaturedRow = ({ id, title, description }) => {
 				{data?.map((restaurant) => {
 					return (
 						<RestaurantCard
-							key={restaurant.id}
 							id={restaurant.id}
-							image={restaurant.image}
-							title={restaurant.title}
+							image_name={restaurant.image_name}
+							title={restaurant.name}
 							rating={restaurant.rating}
 							genre={restaurant.category_name}
 							address={restaurant.address}
 							short_description={restaurant.description}
-							dishes={[]}
 							long={restaurant.long}
 							lat={restaurant.lat}
 						/>

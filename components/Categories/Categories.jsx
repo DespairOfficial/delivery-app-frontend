@@ -17,7 +17,7 @@ const Categories = () => {
 				return (
 					<CategoryCard
 						key={category.id}
-						img={category.image}
+						image_name={category.image_name}
 						title={category.name}
 					/>
 				);

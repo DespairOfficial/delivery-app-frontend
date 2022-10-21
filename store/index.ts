@@ -1,24 +1,24 @@
+import { staticApi } from './static/static.api';
 import { categoryApi } from './category/category.api';
-import { restaurantReducer } from './restaurant/restaurant.slice';
 import { restaurantApi } from './restaurant/restaurant.api';
 import { featuredApi } from './featured/featured.api';
 import { configureStore } from '@reduxjs/toolkit';
-import { featuredReducer } from './featured/featured.slice';
 import { setupListeners } from '@reduxjs/toolkit/dist/query';
 
 export const store = configureStore({
 	reducer: {
 		[featuredApi.reducerPath]: featuredApi.reducer,
-		// featured: featuredReducer,
 		[restaurantApi.reducerPath]: restaurantApi.reducer,
 		[categoryApi.reducerPath]: categoryApi.reducer,
-		// restaurant: restaurantReducer
+		[staticApi.reducerPath]: staticApi.reducer,
+		
 	},
 	middleware: (getDefaultMiddleware) =>
 		getDefaultMiddleware().concat(
 			featuredApi.middleware,
 			restaurantApi.middleware,
-			categoryApi.middleware
+			categoryApi.middleware,
+			staticApi.middleware
 		),
 });
 

@@ -19,7 +19,7 @@ const HomeScreen = () => {
 	}, []);
 	useEffect(() => {}, []);
 	return (
-		<View className="mt-5 bg-white pt-3">
+		<View className="mt-5 bg-white pt-3 pb-28">
 			{/*Header */}	
 			<Header/>
 
