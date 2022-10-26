@@ -4,7 +4,7 @@ export class Category {
      * Category's unique id
      */
   
-    readonly id: string;
+    readonly id: number;
 
     /**
      * Title of featured

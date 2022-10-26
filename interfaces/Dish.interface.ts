@@ -3,7 +3,7 @@ export class Dish {
 	 * Dish's unique id
 	 */
 
-	readonly id: string;
+	readonly id: number;
 
 	/**
 	 * Title of a dish

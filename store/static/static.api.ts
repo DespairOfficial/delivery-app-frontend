@@ -19,5 +19,6 @@ export const staticApi = createApi({
 	}),
 });
 export const {
-	useGetImageByNameQuery
+	useGetImageByNameQuery,
+	useLazyGetImageByNameQuery,
 } = staticApi;

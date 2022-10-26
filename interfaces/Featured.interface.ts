@@ -2,7 +2,7 @@ export class Featured {
 	/**
 	 * Id of featured
 	 */
-	readonly id: string;
+	readonly id: number;
 
 	/**
 	 * Title of featured

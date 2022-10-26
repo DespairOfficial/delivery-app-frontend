@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+// import {DELIVERY_COLOR} from './constants'
 module.exports = {
 	content: [
 		'./App.{js,jsx,ts,tsx}',
@@ -6,7 +7,11 @@ module.exports = {
 		'./components/**/*.{js,jsx,ts,tsx}',
 	],
 	theme: {
-		extend: {},
+		extend: {
+			colors:{
+				// 'current-app-theme-color': DELIVERY_COLOR
+			}
+		},
 	},
 	plugins: [],
 };

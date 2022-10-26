@@ -1,5 +1,5 @@
 import { View, TextInput } from 'react-native';
-import {delivery_color} from '../constants'
+import {DELIVERY_COLOR} from '../constants'
 import {
 	AdjustmentsHorizontalIcon,
 	MagnifyingGlassIcon,
@@ -14,7 +14,7 @@ const SearchRow = () => {
 					keyboardType="default"
 				></TextInput>
 			</View>
-			<AdjustmentsHorizontalIcon color={delivery_color} />
+			<AdjustmentsHorizontalIcon color={DELIVERY_COLOR} />
 		</View>
 	);
 };
